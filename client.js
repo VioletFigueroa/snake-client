@@ -15,9 +15,14 @@ const connect = () => {
     console.log(data.toString());
     //conn.end();
   });
+  conn.on("connect", () => {
+    conn.write(`Name: Oᴥ0`);
+
+    //setInterval(() => conn.write(`Move: up`), 3000);
+  });
   conn.on("end", () => {
     console.log("disconnected from server");
   });
   //return conn;
 };
-module.exports = connect;
+module.exports = {connect};
