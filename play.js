@@ -1,4 +1,3 @@
-const { connect } = require('./client');
-
+const connect = require('./client.js');
 console.log("Connecting ...");
 connect();
